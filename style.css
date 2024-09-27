@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #564846;
+}
+
+body {
+    font-family: 'QuickSand', sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    height: 80vh;
+    width: calc(80vh * 1.4142);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.warning {
+    display: none;
+    font-size: 20px;
+    color: red;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        display: none;
+    }
+
+    .warning {
+        display: block;
+    }
+
+    .download-btn {
+        display: none;
+    }
+}
+
+.background-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.certificate {
+    background-color: #fffbef;
+    padding: 20px;
+    width: 90%;
+    height: 90%;
+    border: 2px solid #fff;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.certificate h1 {
+    font-size: 45px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.certificate p {
+    margin: 10px 0;
+    font-size: 25px;
+}
+
+.certify-text {
+    display: inline-block;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 2px solid #ffb3c6;
+    border-radius: 50px;
+    text-align: center;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    font-size: 25px;
+}
+
+.input-group input {
+    font-size: 25px;
+    font-family: 'QuickSand', sans-serif;
+    text-align: center;
+    color: #564846;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-bottom: 2px dashed #564846;
+    background-color: transparent;
+    outline: none;
+    margin-bottom: 20px;
+}
+
+.promise {
+    margin-bottom: 30px;
+}
+
+
+
+.sign-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.signature,
+.date {
+    width: 45%;
+}
+
+.signature p,
+.date p {
+    margin: 0;
+    color: #564846;
+    font-style: italic;
+}
+
+.logo {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+
+.download-btn {
+    font-size: 25px;
+    padding: 10px 20px;
+    background-color: #ffb3c6;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.download-btn:hover {
+    background-color: #ff91ad;
+}
