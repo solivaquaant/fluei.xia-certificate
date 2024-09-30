@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate of Adoption</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js">    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/png" href="./img/logo-circle.png">
+    <link rel="stylesheet" href="certificate.css">
+
+</head>
+
+<body>
+    <div class="warning">
+        Please rotate your phone to landscape mode for optimal viewing. <br>
+        For the best experience, we recommend using a desktop or laptop screen.
+    </div>
+
+    <div class="container" id="htmlContent">
+        <img src="./img/background.png" alt="Background Image" class="background-image">
+        <div class="certificate">
+            <h1>CERTIFICATE OF ADOPTION</h1>
+            <p class="certify-text">This is to certify that</p>
+            <div class="input-group">
+                <input type="text" id="your-name" placeholder="(your name)" required>
+            </div>
+            <p>has officially adopted</p>
+            <div class="input-group">
+                <input type="text" id="baby-name" placeholder="(baby's name)" required>
+            </div>
+            <p class="promise">By signing this certificate, I promise to love and take care of my new friend forever!
+            </p>
+            <div class="sign-section">
+                <img src="./img/logo.png">
+                <p class="date" id="date"></p>
+            </div>
+        </div>
+        <!-- end of Certificate -->
+    </div>
+    <!-- end of container -->
+
+    <button id="download" class="download-btn">Download</button>
+
+    <script>
+        var today = new Date();
+        var options = { year: 'numeric', month: 'long', day: 'numeric' };
+        document.querySelector('#date').innerText = today.toLocaleDateString(undefined, options);
+
+        document.querySelector('#download').addEventListener('click', function () {
+            var yourName = document.querySelector('#your-name').value.trim();
+            var babyName = document.querySelector('#baby-name').value.trim();
+            if (yourName === "" || babyName === "") {
+                alert("Please fill in your name and baby's name to proceed.");
+                return;
+            }
+
+            window.print();
+        });
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
+
+</body>
+
+</html>

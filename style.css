@@ -2,206 +2,81 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: #564846;
 }
 
 body {
-    font-family: 'QuickSand', sans-serif;
-    background-color: #f4f4f4;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    overflow: hidden;
+    font-family: 'Quicksand', sans-serif;
+    color: #564846;
+    background-image: url("./img/background.png ");
 }
 
 .container {
-    position: relative;
-    height: 80vh;
-    width: calc(80vh * 1.4142);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fffbef;
+    border-radius: 10px;
+    border: 2px solid #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.instructions ol {
+    text-align: left;
+    list-style: decimal;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.instructions ol li {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.contact {
+    text-align: left;
+}
+
+.contact p {
+    font-size: 1rem;
     margin-bottom: 10px;
 }
 
-.warning {
-    display: none;
-    font-size: 3vh;
-    color: red;
-    text-align: center;
-    padding: 5%;
+.contact ul {
+    list-style: none;
 }
 
-.background-image {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
+.contact ul li {
+    font-size: 1rem;
+    margin-bottom: 5px;
 }
 
-.certificate {
-    background-color: #fffbef;
-    padding: 20px;
-    width: 90%;
-    height: 90%;
-    border: 2px solid #fff;
-    border-radius: 15px;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    font-size: 2vw;
-}
-
-.certificate h1 {
-    font-size: 1.5em;
-    font-weight: bold;
-    /* margin-bottom: 10px; */
-}
-
-.certificate p {
-    /* margin: 10px 0; */
-    font-size: 3vh;
-}
-
-.certify-text {
-    display: inline-block;
-    padding: 1vh 5vw;
-    border: 2px solid #ffb3c6;
-    border-radius: 50px;
-    text-align: center;
-}
-
-.input-group {
-    margin-bottom: 3vh;
-}
-
-.input-group label {
-    font-size: 1em;
-}
-
-.input-group input {
-    font-size: 1em;
-    font-family: 'QuickSand', sans-serif;
-    text-align: center;
-    color: #564846;
-    padding: 2%;
-    width: 100%;
-    border: none;
-    border-bottom: 2px dashed #564846;
-    background-color: transparent;
-    outline: none;
-    margin-bottom: 2vh;
-}
-
-.promise {
-    margin-bottom: 30px;
-    font-size: 1em;
-}
-
-.sign-section {
-    display: flex;
-    justify-content: space-between;
-    font-size: 1em;
-}
-
-.signature,
-.date {
-    width: 45%;
-}
-
-.signature p,
-.date p {
-    margin: 0;
-    color: #564846;
+footer {
+    margin-top: 20px;
+    font-size: 1.2rem;
     font-style: italic;
+    color: #666;
 }
 
-.logo {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-}
-
-.download-btn {
-    font-size: 3vh;
-    padding: 10px 20px;
-    background-color: #ffb3c6;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 10px;
-}
-
-.download-btn:hover {
-    background-color: #ff91ad;
-}
-
-/* Media Queries cho các thiết bị khác nhau */
-@media (max-width: 1023px) {
-    .certificate {
-        font-size: 2vw;
-    }
-
-    .certificate h1 {
-        /* font-size: 2em; */
-    }
-
-    .certify-text {
-        margin: 0;
-    }
-
-    .certify-text,
-    .certificate p,
-    .input-group input,
-    .promise,
-    .sign-section {
-        font-size: 0.7em;
-    }
-
-    .download-btn {
-        font-size: 0.7em;
-    }
-
-    .promise {
-        margin-bottom: 2%;
-    }
-}
-
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     .container {
-        display: none;
+        padding: 10px;
     }
 
-    .warning {
-        display: block;
+    h1 {
+        font-size: 1.5rem;
     }
 
-    .download-btn {
-        display: none;
-    }
-}
-
-
-@media print {
-    .certificate {
-        font-size: 2vw;
+    .instructions ol li {
+        font-size: 1rem;
     }
 
-    .certificate h1 {
-        font-size: 2.2em;
-    }
-
-    .certificate p,
-    .input-group input,
-    .promise,
-    .sign-section p {
-        font-size: 1.2em;
-    }
-
-    .warning,
-    .download-btn {
-        display: none;
+    footer {
+        font-size: 1rem;
     }
 }

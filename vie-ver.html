@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giấy nhận nuôi</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js">    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/png" href="./img/logo-circle.png">
+    <link rel="stylesheet" href="certificate.css">
+
+</head>
+
+<body>
+    <div class="warning">
+        Vui lòng xoay điện thoại của bạn sang chế độ ngang để có trải nghiệm xem tối ưu. <br>
+        Để có trải nghiệm tốt nhất, chúng tôi khuyến nghị sử dụng màn hình máy tính để bàn hoặc laptop.
+    </div>
+
+    <div class="container" id="htmlContent">
+        <img src="./img/background.png" alt="Background Image" class="background-image">
+        <div class="certificate">
+            <h1>GIẤY NHẬN NUÔI</h1>
+            <p class="certify-text">Chứng nhận</p>
+            <div class="input-group">
+                <input type="text" id="your-name" placeholder="(tên của bạn)" required>
+            </div>
+            <p>đã nhận nuôi bé</p>
+            <div class="input-group">
+                <input type="text" id="baby-name" placeholder="(tên của bé)" required>
+            </div>
+            <p class="promise">Khi ký vào giấy này, tôi hứa sẽ luôn yêu thương và chăm sóc người bạn mới của mình!
+            </p>
+
+            <div class="sign-section">
+                <img src="./img/logo.png">
+                <p class="date" id="date"></p>
+            </div>
+        </div>
+        <!-- end of Certificate -->
+    </div>
+    <!-- end of container -->
+
+    <button id="download" class="download-btn">Tải về</button>
+
+    <script>
+        var today = new Date();
+        var options = { year: 'numeric', month: 'numeric', day: 'numeric' };
+        document.querySelector('#date').innerText = today.toLocaleDateString('en-GB', options);
+
+        document.querySelector('#download').addEventListener('click', function () {
+            var yourName = document.querySelector('#your-name').value.trim();
+            var babyName = document.querySelector('#baby-name').value.trim();
+            if (yourName === "" || babyName === "") {
+                alert("Hãy điền đầy đủ tên của bạn và tên của bé nhé~");
+                return;
+            }
+
+            window.print();
+        });
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
+
+</body>
+
+</html>

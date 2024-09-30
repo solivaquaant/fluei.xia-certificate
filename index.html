@@ -1,69 +1,44 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="vi">
 
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Certificate of Adoption</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js">    </script>
+    <title>Hướng Dẫn</title>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="./img/logo-circle.png">
 
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="warning">
-        Please rotate your phone to landscape mode for optimal viewing. <br>
-        For the best experience, we recommend using a desktop or laptop screen.
-    </div>
-
-    <div class="container" id="htmlContent">
-        <img src="./img/background.png" alt="Background Image" class="background-image">
-        <div class="certificate">
-            <h1>CERTIFICATE OF ADOPTION</h1>
-            <p class="certify-text">This is to certify that</p>
-            <div class="input-group">
-                <input type="text" id="your-name" placeholder="(your name)" required>
-            </div>
-            <p>has officially adopted</p>
-            <div class="input-group">
-                <input type="text" id="baby-name" placeholder="(baby's name)" required>
-            </div>
-            <p class="promise">By signing this certificate, I promise to love and take care of my new friend forever!
-            </p>
-            <div class="sign-section">
-                <p class="signature">signature</p>
-                <p class="date" id="date"></p>
-                <p>
-            </div>
+    <div class="container">
+        <div class="instructions">
+            <h1>HƯỚNG DẪN</h1>
+            <ol>
+                <li>Truy cập <a href="./vie-ver.html">đây</a> để nếu dùng ngôn ngữ Tiếng Việt,
+                    truy cập <a href="./eng-ver.html">đây</a> để dùng ngôn ngữ Tiếng Anh.</li>
+                <li>Điền tên của bạn và của bé.</li>
+                <li>Nhấn Tải về/Download.</li>
+                <li>Chỉnh sửa định dạng ngang/landscape để hiển thị nội dung.</li>
+                <li>Chọn More Settings, tick chọn Background graphics.</li>
+                <li>Chọn Print</li>
+            </ol>
         </div>
-        <!-- end of Certificate -->
+        <div class="contact">
+            <p>Mình là Thái Trinh. Nếu có thắc mắc hay lỗi trong quá trình sử dụng, hãy liên hệ với mình qua các cách
+                sau:</p>
+            <ul>
+                <li><a href="https://www.facebook.com/trinh.thai.50364/">Facebook</a></li>
+                <li><a href="mailto:thaitrinh12100@gmail.com?subject=Hỗ trợ&body=Mình có thắc mắc về...">Gmail</a>
+                </li>
+            </ul>
+        </div>
+        <footer>
+            <p>"from my hands to yours"</p>
+        </footer>
     </div>
-    <!-- end of container -->
-
-    <button id="download" class="download-btn">Download</button>
-
-    <script>
-        var today = new Date();
-        var options = { year: 'numeric', month: 'long', day: 'numeric' };
-        document.querySelector('#date').innerText = today.toLocaleDateString(undefined, options);
-
-        document.querySelector('#download').addEventListener('click', function () {
-            var yourName = document.querySelector('#your-name').value.trim();
-            var babyName = document.querySelector('#baby-name').value.trim();
-            if (yourName === "" || babyName === "") {
-                alert("Please fill in your name and baby's name to proceed.");
-                return;
-            }
-
-            window.print();
-        });
-    </script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
-
 </body>
 
 </html>
