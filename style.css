@@ -183,19 +183,25 @@ body {
     }
 }
 
-@media (max-width: 400px) {
+
+@media print {
+    .certificate {
+        font-size: 2vw;
+    }
+
     .certificate h1 {
-        /* font-size: 7vw; */
+        font-size: 2.2em;
     }
 
     .certificate p,
     .input-group input,
     .promise,
-    .sign-section {
-        /* font-size: 5vw; */
+    .sign-section p {
+        font-size: 1.2em;
     }
 
+    .warning,
     .download-btn {
-        /* font-size: 5vw; */
+        display: none;
     }
 }
