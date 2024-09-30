@@ -13,13 +13,13 @@
 
 </head>
 
-<body>
+<body onload="autoClick();">
     <div class="warning">
         Please rotate your phone to landscape mode for optimal viewing. <br>
         For the best experience, we recommend using a desktop or laptop screen.
     </div>
 
-    <div class="container">
+    <div class="container" id="htmlContent">
         <img src="./img/background.png" alt="Background Image" class="background-image">
         <div class="certificate">
             <h1>CERTIFICATE OF ADOPTION</h1>
@@ -38,10 +38,36 @@
                 <p class="date">date
                 <p>
             </div>
-        </div> <!-- end of Certificate -->
-    </div> <!-- end of container -->
+        </div>
+        <!-- end of Certificate -->
+    </div>
+    <!-- end of container -->
 
-    <button class="download-btn">Download</button>
+    <a id="download">Download</a>
+
+
+    <script type="text/javascript">
+        function autoClick() {
+            $("#download").click();
+        }
+
+        $(document).ready(function () {
+            var element = $("#htmlContent");
+
+            $("#download").on('click', function () {
+                alert("1")
+                html2canvas(element, {
+                    useCORS: true, // Thêm tùy chọn này
+                    onrendered: function (canvas) {
+                        var imageData = canvas.toDataURL("image/jpg");
+                        var newData = imageData.replace(/^data:image\/jpg/, "data:application/octet-stream");
+                        $("#download").attr("download", "image.jpg").attr("href", newData);
+                    }
+                });
+
+            });
+        });
+    </script>
 
 </body>
 
