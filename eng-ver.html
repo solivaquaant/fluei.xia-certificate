@@ -34,11 +34,6 @@
             </div>
             <p class="promise">By signing this certificate, I promise to love and take care of my new friend forever!
             </p>
-            <!-- <div class="sign-section">
-                <img src="./img/logo.png">
-                 <p></p>
-                <p class="date" id="date"></p>
-            </div> -->
             <img src="./img/logo.png" alt="Heart Logo" class="heart">
             <p class="date" id="date"></p>
         </div>
@@ -50,8 +45,8 @@
 
     <script>
         var today = new Date();
-        var options = { year: 'numeric', month: 'long', day: 'numeric' };
-        document.querySelector('#date').innerText = today.toLocaleDateString(undefined, options);
+        var options = { year: 'numeric', month: 'numeric', day: 'numeric' };
+        document.querySelector('#date').innerText = today.toLocaleDateString('en-GB', options);
 
         document.querySelector('#download').addEventListener('click', function () {
             var yourName = document.querySelector('#your-name').value.trim();
