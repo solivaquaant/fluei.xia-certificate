@@ -182,6 +182,7 @@ body {
 
     .certificate h1 {
         font-size: 1.5em;
+        color: red;
     }
 
     .certify-text {
