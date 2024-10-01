@@ -31,6 +31,9 @@ h1 {
     list-style: decimal;
     padding-left: 20px;
     margin-bottom: 20px;
+    border: 2px solid #ffb3c6;
+    border-radius: 10px;
+    ;
 }
 
 .instructions ol li {

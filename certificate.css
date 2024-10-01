@@ -92,7 +92,7 @@ body {
     border-bottom: 2px dashed #564846;
     background-color: transparent;
     outline: none;
-    margin-bottom: 2vh;
+    /* margin-bottom: 2vh; */
 }
 
 .promise {
@@ -182,7 +182,6 @@ body {
 
     .certificate h1 {
         font-size: 1.2em;
-        color: red;
     }
 
     .certify-text {
