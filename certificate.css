@@ -130,6 +130,34 @@ body {
     font-style: italic;
 }
 
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.logo img {
+    width: 80px;
+    height: auto;
+}
+
+.heart {
+    position: absolute;
+    bottom: 5%;
+    right: 75%;
+    width: 20%;
+    height: auto;
+}
+
+.date {
+    position: absolute;
+    bottom: 15%;
+    right: 0%;
+    font-size: 1rem;
+    color: #564846;
+}
+
 .download-btn {
     font-size: 3vh;
     padding: 10px 20px;
