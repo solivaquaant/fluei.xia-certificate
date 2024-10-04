@@ -5,7 +5,7 @@
 
 This website allows users (mostly my friends) to create and download a personalized *Certificate of Adoption*. It consists of 3 web pages: one for instructions and contact information, and the others for entering personal details to generate a downloadable PDF certificate.
 
-You can visit my website [here](https://solivaquaant.github.io/flueixia-certficate/)💕
+You can visit my website [here](https://solivaquaant.github.io/fluei.xia-certificate/)💕
 ## Table of Contents
 - [@fluei.xia's Certificate of Adoption](#flueixias-certificate-of-adoption)
   - [Table of Contents](#table-of-contents)
