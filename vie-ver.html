@@ -42,7 +42,7 @@
     <!-- end of container -->
 
     <button id="download" class="download-btn">Tải về</button>
-
+    
     <script>
         var today = new Date();
         var options = { year: 'numeric', month: 'numeric', day: 'numeric' };
@@ -52,11 +52,18 @@
             var yourName = document.querySelector('#your-name').value.trim();
             var babyName = document.querySelector('#baby-name').value.trim();
             if (yourName === "" || babyName === "") {
-                alert("Hãy điền đầy đủ tên của bạn và tên của bé nhé~");
+                alert("Vui lòng điền tên của bạn và tên của bé để tiếp tục.");
                 return;
             }
 
-            window.print();
+            html2canvas(document.querySelector("#htmlContent")).then(canvas => {
+                var link = document.createElement('a');
+                link.download = 'certificate.png';
+                link.href = canvas.toDataURL();
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            });
         });
     </script>
 
